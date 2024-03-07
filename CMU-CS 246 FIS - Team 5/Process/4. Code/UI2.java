@@ -41,11 +41,15 @@ public class UI2 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         resultTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        DeleteBtn = new javax.swing.JButton();
+        BackSpaceBtn = new javax.swing.JButton();
+        squareBtn = new javax.swing.JButton();
+        SquareRootBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 51, 51));
 
-        jButton1.setBackground(new java.awt.Color(153, 255, 153));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setText("Reset");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +66,7 @@ public class UI2 extends javax.swing.JFrame {
             }
         });
 
+        plusBtn.setBackground(new java.awt.Color(204, 204, 204));
         plusBtn.setText("+");
         plusBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,6 +74,7 @@ public class UI2 extends javax.swing.JFrame {
             }
         });
 
+        subtractBtn.setBackground(new java.awt.Color(204, 204, 204));
         subtractBtn.setText("-");
         subtractBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +82,7 @@ public class UI2 extends javax.swing.JFrame {
             }
         });
 
+        multiplicBtn.setBackground(new java.awt.Color(204, 204, 204));
         multiplicBtn.setText("*");
         multiplicBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +90,7 @@ public class UI2 extends javax.swing.JFrame {
             }
         });
 
+        divideBtn.setBackground(new java.awt.Color(204, 204, 204));
         divideBtn.setText("/");
         divideBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +98,7 @@ public class UI2 extends javax.swing.JFrame {
             }
         });
 
+        modBtn.setBackground(new java.awt.Color(204, 204, 204));
         modBtn.setText("%");
         modBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,41 +115,80 @@ public class UI2 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel3.setText("Result");
 
+        DeleteBtn.setBackground(new java.awt.Color(204, 204, 204));
+        DeleteBtn.setText("Delete");
+        DeleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteBtnActionPerformed(evt);
+            }
+        });
+
+        BackSpaceBtn.setBackground(new java.awt.Color(204, 204, 204));
+        BackSpaceBtn.setText("BackSpace");
+        BackSpaceBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackSpaceBtnActionPerformed(evt);
+            }
+        });
+
+        squareBtn.setBackground(new java.awt.Color(204, 204, 204));
+        squareBtn.setText("x²");
+        squareBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                squareBtnActionPerformed(evt);
+            }
+        });
+
+        SquareRootBtn.setBackground(new java.awt.Color(204, 204, 204));
+        SquareRootBtn.setText("√x");
+        SquareRootBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SquareRootBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(resultTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(b_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(a_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(resultTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(b_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(a_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(plusBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(multiplicBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(modBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(14, 14, 14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(divideBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(subtractBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(squareBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(divideBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(subtractBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(SquareRootBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(DeleteBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BackSpaceBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,25 +200,29 @@ public class UI2 extends javax.swing.JFrame {
                             .addComponent(a_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(subtractBtn)
-                            .addComponent(plusBtn))
+                            .addComponent(plusBtn)
+                            .addComponent(BackSpaceBtn))
                         .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(b_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
-                            .addComponent(divideBtn))
+                            .addComponent(divideBtn)
+                            .addComponent(DeleteBtn))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(resultTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButton1)
-                                .addComponent(modBtn))
+                                .addComponent(modBtn)
+                                .addComponent(squareBtn)
+                                .addComponent(SquareRootBtn))
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addComponent(multiplicBtn)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58))
+                .addGap(60, 60, 60))
         );
 
         pack();
@@ -208,8 +260,15 @@ public class UI2 extends javax.swing.JFrame {
         }
         else if(a_TextField.getText().equals("") || b_TextField.getText().equals(""))
             JOptionPane.showMessageDialog(null, "Do not empty text field");
-        else if(b_TextField.getText().equals("0"))
-            JOptionPane.showMessageDialog(null, "B is not allowed to be 0");
+        else if(b_TextField.getText().equals("0") || b_TextField.getText().equals("-0") || b_TextField.getText().equals("+0")){
+            if(b_TextField.getText().equals("0"))
+                JOptionPane.showMessageDialog(null, "B is not allowed to be 0");
+            else if(b_TextField.getText().equals("-0"))
+                JOptionPane.showMessageDialog(null, "B is not allowed to be -0");
+            else if(b_TextField.getText().equals("+0"))
+                JOptionPane.showMessageDialog(null, "B is not allowed to be +0");
+            onReset();
+        }
         else {
             try{
                 String result = p.modulo(a_TextField.getText(), b_TextField.getText());
@@ -284,8 +343,16 @@ public class UI2 extends javax.swing.JFrame {
         }
         else if(a_TextField.getText().equals("") || b_TextField.getText().equals(""))
            JOptionPane.showMessageDialog(null, "Do not empty text field");
-        else if(b_TextField.getText().equals("0"))
-            JOptionPane.showMessageDialog(null, "B is not allowed to be 0");
+        else if(b_TextField.getText().equals("0") || b_TextField.getText().equals("-0") || b_TextField.getText().equals("+0")){
+            if(b_TextField.getText().equals("0"))
+                JOptionPane.showMessageDialog(null, "B is not allowed to be 0");
+            else if(b_TextField.getText().equals("-0"))
+                JOptionPane.showMessageDialog(null, "B is not allowed to be -0");
+            else if(b_TextField.getText().equals("+0"))
+                JOptionPane.showMessageDialog(null, "B is not allowed to be +0");
+            onReset();
+        }
+            
         else {
             try{
                 String result = p.divide(a_TextField.getText(), b_TextField.getText());
@@ -302,6 +369,107 @@ public class UI2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
+        if(a_TextField.getText().equals("") && b_TextField.getText().equals(""))
+            JOptionPane.showMessageDialog(this, "Text field is empty");
+        else{
+            Project_calculator p = new Project_calculator();
+            if(!a_TextField.getText().equals("")){
+                String s1 = p.deleteLeft(a_TextField.getText());
+                a_TextField.setText(s1);
+            }         
+            else{
+                String s2 = p.deleteLeft(b_TextField.getText());
+                b_TextField.setText(s2);
+            }
+        }
+    }//GEN-LAST:event_DeleteBtnActionPerformed
+
+    private void BackSpaceBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackSpaceBtnActionPerformed
+        if(a_TextField.getText().equals("") && b_TextField.getText().equals(""))
+            JOptionPane.showMessageDialog(this, "Text field is empty");
+        else{
+            Project_calculator p = new Project_calculator();
+            if(!b_TextField.getText().equals("")){
+                String s1 = p.deleteRight(b_TextField.getText());
+                b_TextField.setText(s1);
+            }         
+            else{
+                String s2 = p.deleteRight(a_TextField.getText());
+                a_TextField.setText(s2);
+            }
+        }
+            
+    }//GEN-LAST:event_BackSpaceBtnActionPerformed
+
+    private void squareBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_squareBtnActionPerformed
+        Project_calculator p = new Project_calculator();
+        if(!p.check(a_TextField.getText())){
+            JOptionPane.showMessageDialog(null, "Invalid number");
+            onReset();
+        }
+        else if(!b_TextField.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Do not fill in text field B");
+            onReset();
+        }
+        else if(a_TextField.getText().equals(""))
+           JOptionPane.showMessageDialog(null, "Do not empty text field");
+        else if(a_TextField.getText().equals("0") || a_TextField.getText().equals("-0") || a_TextField.getText().equals("+0")){
+            if(a_TextField.getText().equals("0"))
+                JOptionPane.showMessageDialog(null, "A is not allowed to be 0");
+            else if(a_TextField.getText().equals("-0"))
+                JOptionPane.showMessageDialog(null, "A is not allowed to be -0");
+            else if(a_TextField.getText().equals("+0"))
+                JOptionPane.showMessageDialog(null, "A is not allowed to be +0");
+            onReset();
+        }
+            
+        else {
+            try{
+                String result = p.pow(a_TextField.getText());
+                resultTextField.setText(result);
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+                onReset();
+            }
+        }
+    }//GEN-LAST:event_squareBtnActionPerformed
+
+    private void SquareRootBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SquareRootBtnActionPerformed
+        Project_calculator p = new Project_calculator();
+        if(!p.check(a_TextField.getText())){
+            JOptionPane.showMessageDialog(null, "Invalid number");
+            onReset();
+        }
+        else if(!b_TextField.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Do not fill in text field B");
+            onReset();
+        }
+        else if(a_TextField.getText().equals(""))
+           JOptionPane.showMessageDialog(null, "Do not empty text field");
+        else if(a_TextField.getText().equals("0") || a_TextField.getText().equals("-0") || a_TextField.getText().equals("+0")){
+            if(a_TextField.getText().equals("0"))
+                JOptionPane.showMessageDialog(null, "A is not allowed to be 0");
+            else if(a_TextField.getText().equals("-0"))
+                JOptionPane.showMessageDialog(null, "A is not allowed to be -0");
+            else if(a_TextField.getText().equals("+0"))
+                JOptionPane.showMessageDialog(null, "A is not allowed to be +0");
+            onReset();
+        }
+            
+        else {
+            try{
+                String result = p.sqrt(a_TextField.getText());
+                resultTextField.setText(result);
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+                onReset();
+            }
+        }
+    }//GEN-LAST:event_SquareRootBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,6 +507,9 @@ public class UI2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackSpaceBtn;
+    private javax.swing.JButton DeleteBtn;
+    private javax.swing.JButton SquareRootBtn;
     private javax.swing.JTextField a_TextField;
     private javax.swing.JTextField b_TextField;
     private javax.swing.JButton divideBtn;
@@ -351,6 +522,7 @@ public class UI2 extends javax.swing.JFrame {
     private javax.swing.JButton multiplicBtn;
     private javax.swing.JButton plusBtn;
     private javax.swing.JTextField resultTextField;
+    private javax.swing.JButton squareBtn;
     private javax.swing.JButton subtractBtn;
     // End of variables declaration//GEN-END:variables
 }
