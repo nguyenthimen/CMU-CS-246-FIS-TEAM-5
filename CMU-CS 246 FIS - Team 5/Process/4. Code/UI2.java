@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package test_cal;
+package calculator;
 
 import javax.swing.JOptionPane;
 
@@ -410,7 +410,7 @@ public class UI2 extends javax.swing.JFrame {
             onReset();
         }
         else if(!b_TextField.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Do not fill in text field B");
+            JOptionPane.showMessageDialog(null, "Do not enter in text field B");
             onReset();
         }
         else if(a_TextField.getText().equals(""))
@@ -444,7 +444,7 @@ public class UI2 extends javax.swing.JFrame {
             onReset();
         }
         else if(!b_TextField.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Do not fill in text field B");
+            JOptionPane.showMessageDialog(null, "Do not enter in text field B");
             onReset();
         }
         else if(a_TextField.getText().equals(""))
