@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package calculator;
+package test_cal;
 
 import javax.swing.JOptionPane;
 
@@ -410,15 +410,13 @@ public class UI2 extends javax.swing.JFrame {
             onReset();
         }
         else if(!b_TextField.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Do not enter in text field B");
+            JOptionPane.showMessageDialog(null, "Do not fill in text field B");
             onReset();
         }
         else if(a_TextField.getText().equals(""))
            JOptionPane.showMessageDialog(null, "Do not empty text field");
-        else if(a_TextField.getText().equals("0") || a_TextField.getText().equals("-0") || a_TextField.getText().equals("+0")){
-            if(a_TextField.getText().equals("0"))
-                JOptionPane.showMessageDialog(null, "A is not allowed to be 0");
-            else if(a_TextField.getText().equals("-0"))
+        else if(a_TextField.getText().equals("-0") || a_TextField.getText().equals("+0")){
+            if(a_TextField.getText().equals("-0"))
                 JOptionPane.showMessageDialog(null, "A is not allowed to be -0");
             else if(a_TextField.getText().equals("+0"))
                 JOptionPane.showMessageDialog(null, "A is not allowed to be +0");
@@ -444,15 +442,13 @@ public class UI2 extends javax.swing.JFrame {
             onReset();
         }
         else if(!b_TextField.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Do not enter in text field B");
+            JOptionPane.showMessageDialog(null, "Do not fill in text field B");
             onReset();
         }
         else if(a_TextField.getText().equals(""))
            JOptionPane.showMessageDialog(null, "Do not empty text field");
-        else if(a_TextField.getText().equals("0") || a_TextField.getText().equals("-0") || a_TextField.getText().equals("+0")){
-            if(a_TextField.getText().equals("0"))
-                JOptionPane.showMessageDialog(null, "A is not allowed to be 0");
-            else if(a_TextField.getText().equals("-0"))
+        else if(a_TextField.getText().equals("-0") || a_TextField.getText().equals("+0")){
+            if(a_TextField.getText().equals("-0"))
                 JOptionPane.showMessageDialog(null, "A is not allowed to be -0");
             else if(a_TextField.getText().equals("+0"))
                 JOptionPane.showMessageDialog(null, "A is not allowed to be +0");
